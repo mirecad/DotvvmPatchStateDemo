@@ -1,0 +1,23 @@
+﻿@viewModel DotvvmPatchStateDemo.ViewModels.DefaultViewModel, DotvvmPatchStateDemo
+@masterPage Views/MasterPage.dotmaster
+@js toasts-module
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <div class="content">
+
+        <img src="/Resources/Images/tree.svg" class="content__background-image content__background-image--left" />
+
+        <a href="https://www.dotvvm.com/" target="_blank">
+            <img src="/Resources/Images/text.svg" class="content__image" />
+        </a>
+        <div class="content__text">
+            <h1>{{value: Title}}</h1>
+
+        </div>
+
+        <img src="/Resources/Images/tree.svg" class="content__background-image content__background-image content__background-image--right" />
+
+        <dot:Button Text="Invoke signalr broadcast to change title" Click="{command: InvokeSignalrBroadcast()}">
+    </div>
+</dot:Content>
